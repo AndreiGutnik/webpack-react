@@ -16,8 +16,11 @@ const devServer = {
   open: true,
   compress: true,
   allowedHosts: 'all',
-  // hot: true,
-  static: path.resolve(__dirname, './src'),
+  hot: true,
+  //static: path.resolve(__dirname, './src'),
+  static: {
+    directory: path.join(__dirname, 'dist'),
+  },
   port: 3000,
 };
 
